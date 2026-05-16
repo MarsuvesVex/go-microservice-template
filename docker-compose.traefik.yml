@@ -1,0 +1,17 @@
+services:
+  nginx:
+    labels:
+      - traefik.enable=true
+      - traefik.http.routers.${TRAEFIK_ROUTER:-go-template}.rule=Host(`${DOMAIN:-go-template.dev.local}`)
+      - traefik.http.routers.${TRAEFIK_ROUTER:-go-template}.entrypoints=${TRAEFIK_ENTRYPOINTS:-web,websecure}
+      - traefik.http.routers.${TRAEFIK_ROUTER:-go-template}.service=${TRAEFIK_ROUTER:-go-template}
+      - traefik.http.routers.${TRAEFIK_ROUTER:-go-template}.tls.certresolver=${TRAEFIK_CERTRESOLVER:-myresolver}
+      - traefik.http.services.${TRAEFIK_ROUTER:-go-template}.loadbalancer.server.port=80
+    networks:
+      - internal
+      - traefik
+
+networks:
+  traefik:
+    external: true
+    name: ${TRAEFIK_NETWORK:-traf-external}

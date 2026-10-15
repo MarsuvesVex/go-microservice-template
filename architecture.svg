@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Go Microservice Template architecture</title>
+  <desc id="desc">API, worker, and scheduler services connect through NATS JetStream, with Postgres and Redis infrastructure. Docker Compose adds optional Nginx and Traefik layers.</desc>
+  <defs>
+    <radialGradient id="glow"><stop stop-color="#103941"/><stop offset="1" stop-color="#0b1019"/></radialGradient>
+    <linearGradient id="accent"><stop stop-color="#22d3ee"/><stop offset="1" stop-color="#818cf8"/></linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="#0b1019"/>
+  <rect width="1600" height="900" fill="url(#glow)"/>
+  <g font-family="Arial, Helvetica, sans-serif">
+    <text x="100" y="95" fill="#67e8f9" font-size="20" letter-spacing="4">GO · EVENT-DRIVEN BACKENDS</text>
+    <text x="96" y="175" fill="#f1f5f9" font-size="66" font-weight="700">Go Microservice Template</text>
+    <text x="100" y="225" fill="#a5b4c8" font-size="27">Three services. Shared infrastructure. Composable deployment.</text>
+    <g fill="none" stroke="#4b6a83" stroke-width="3">
+      <path d="M325 457V510H1275V457M800 457V550M325 510V457M800 650V690H540V725M800 690H1060V725"/>
+    </g>
+    <g fill="#111e2d" stroke="#335167" stroke-width="2">
+      <rect x="100" y="300" width="450" height="157" rx="20"/>
+      <rect x="575" y="300" width="450" height="157" rx="20"/>
+      <rect x="1050" y="300" width="450" height="157" rx="20"/>
+    </g>
+    <g fill="#67e8f9" font-size="18" letter-spacing="2">
+      <text x="130" y="337">01 / REQUESTS</text><text x="605" y="337">02 / EVENTS</text><text x="1080" y="337">03 / TIME</text>
+    </g>
+    <g fill="#f1f5f9" font-size="36" font-weight="700">
+      <text x="130" y="386">API</text><text x="605" y="386">Worker</text><text x="1080" y="386">Scheduler</text>
+    </g>
+    <g fill="#a5b4c8" font-size="22">
+      <text x="130" y="425">HTTP / REST endpoints</text><text x="605" y="425">Background event tasks</text><text x="1080" y="425">Timed jobs</text>
+    </g>
+    <rect x="350" y="550" width="900" height="100" rx="20" fill="#112d3b" stroke="url(#accent)" stroke-width="2"/>
+    <text x="800" y="593" fill="#e0f2fe" font-size="31" font-weight="700" text-anchor="middle">NATS JetStream</text>
+    <text x="800" y="626" fill="#a5b4c8" font-size="21" text-anchor="middle">Event bus foundation</text>
+    <g fill="#111e2d" stroke="#335167" stroke-width="2">
+      <rect x="350" y="725" width="380" height="80" rx="16"/><rect x="870" y="725" width="380" height="80" rx="16"/>
+    </g>
+    <text x="540" y="774" fill="#e2e8f0" font-size="28" text-anchor="middle">Postgres</text>
+    <text x="1060" y="774" fill="#e2e8f0" font-size="28" text-anchor="middle">Redis</text>
+    <text x="800" y="860" fill="#94a3b8" font-size="20" text-anchor="middle">Docker Compose · Nginx routing layer · Optional Traefik overlay</text>
+  </g>
+</svg>

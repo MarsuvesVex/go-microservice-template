@@ -1,7 +1,6 @@
-# Go Microservice Template
-
 <div align="center">
-
+<img src="./architecture.svg" alt="Go Microservice Template Architecture" width="100%" />
+  
 # ⚡ Go Microservice Template
 
 Production-ready Go microservice template for event-driven platforms, SaaS backends, orchestration systems, and scalable internal tooling.
